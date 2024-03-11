@@ -1,0 +1,150 @@
+/* import font */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Young+Serif&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: inherit
+}
+
+body {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 400;
+    background-color: hsl(30, 54%, 90%);
+    display: grid;
+    place-items: center;
+    color: hsl(30, 10%, 34%);
+    min-height: 100vh;
+}
+
+.container {
+    background-color: #fff;
+    border-radius: 15px;
+    padding: 1.5rem;
+    width: 700px;
+    margin: 5rem 0;
+    box-shadow: 0px 0px 20px 1px #0000001c;
+
+    > img {
+        border-radius: calc(5px);
+        width: calc(700px - 3rem);
+        object-fit: cover;
+        margin-bottom: 1rem;
+    }
+
+    h1, h3 {
+        font-family: 'Young Serif', serif;
+        font-weight: 400;
+        color: #000;
+        margin-bottom: 1rem;
+    }
+    > p {
+        margin-bottom: 1rem;
+    }
+}
+
+.time {
+    background-color: hsla(332, 51%, 32%, 0.13);
+    border-radius: 10px;
+    padding: 1.5rem;
+    margin: 1rem 0;
+
+    h3 {
+        font-family: 'outfit', sans-serif;
+        color: hsl(332, 51%, 32%) !important;
+        font-weight: 700;
+        font-size: 1em;
+    }
+
+    ul {
+        padding: 1rem;
+        line-height: 2em;
+        color: hsl(30, 10%, 34%);
+
+        li {
+            padding-left: 1rem;
+
+            &::marker {
+                color: hsl(332, 51%, 32%);
+            }
+        }
+    }
+}
+
+h3, h4 {
+    color: hsl(14, 45%, 36%) !important;
+    font-size: 1.5em;
+}
+
+hr {
+    border: .5px solid hsl(30, 18%, 87%);
+    margin: 2rem 0;
+}
+
+.ingredients {
+    padding: 0 1rem;
+    line-height: 2em;
+    li {
+        padding-left: 1rem;
+        &::marker {
+            color:hsl(14, 45%, 36%);
+        }
+    }
+}
+
+.instructions {
+    padding: 0 1rem;
+
+    li {
+        padding-left: 1rem;
+        line-height: 2em;
+        &::marker {
+            color:hsl(14, 45%, 36%);
+            font-weight: 600;
+        }
+    }
+}
+
+.nutrition {
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        tr {
+            td {
+                border-bottom: 1px solid hsl(30, 18%, 87%);
+                &:first-child {
+                    padding: 1rem;
+                }
+                &:last-child {
+                    color:hsl(14, 45%, 36%);
+                    font-weight: 600;
+                }
+            }
+
+            &:last-child {
+                td {
+                    border-bottom: unset;
+                }
+            }
+        }
+    }
+}
+
+/* responsive */
+
+@media (max-width: 700px) {
+ .container {
+    margin: unset;
+    border-radius: unset;
+    width: unset;
+    padding: unset;
+    > img {
+        width: 100%;
+        border-radius: unset;
+    }
+ }
+ .text-container {
+    padding: 0 1.5rem;
+ }   
+}
